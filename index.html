@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#183f32" />
+  <title>WildQuest AI | Explore the Wild</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">🌿 WildQuest<span> AI</span></a>
+    <span class="nav-tag">TOUCH GRASS CHALLENGE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR SCREEN IS THE STARTING POINT</p>
+      <h1>Less scrolling.<br /><span>More exploring.</span></h1>
+      <p class="hero-text">
+        Step outside, discover the little things, and let AI help you
+        explore the natural world around you.
+      </p>
+      <a href="#discover" class="primary-btn">Start exploring ↓</a>
+
+      <div class="stats">
+        <div><strong id="points">0</strong><span>XP earned</span></div>
+        <div><strong id="discoveries">0</strong><span>Discoveries</span></div>
+        <div><strong id="questsDone">0</strong><span>Quests done</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="discover">
+      <div class="section-heading">
+        <p class="eyebrow">01 / AI NATURE LAB</p>
+        <h2>What did you discover?</h2>
+        <p>Upload a photo of something you found outdoors.</p>
+      </div>
+
+      <div class="explorer-card">
+        <label class="upload-area" for="photoInput" id="uploadArea">
+          <img id="preview" alt="Your nature photo preview" hidden />
+          <div id="uploadPrompt">
+            <div class="upload-icon">📸</div>
+            <h3>Bring your discovery here</h3>
+            <p>Choose a photo of a plant, animal, leaf, or flower.</p>
+            <span class="secondary-btn">Choose a photo</span>
+          </div>
+        </label>
+
+        <input type="file" id="photoInput" accept="image/*" hidden />
+
+        <button class="primary-btn full-btn" id="analyzeBtn" disabled>
+          ✨ Identify with AI
+        </button>
+
+        <p id="aiStatus" class="status" role="status" aria-live="polite">
+          AI model will load when you start an identification.
+        </p>
+
+        <div id="result" class="result" hidden>
+          <p class="eyebrow">YOUR AI RESULTS</p>
+          <h3 id="resultTitle">Discovery</h3>
+          <p id="resultDescription"></p>
+          <p class="confidence" id="confidence"></p>
+          <button class="secondary-btn" id="saveDiscoveryBtn">
+            + Save discovery & earn 20 XP
+          </button>
+        </div>
+      </div>
+      <p class="small-note">
+        AI predictions can be wrong. Treat results as suggestions, not
+        verified species identifications. Never eat or touch an unknown species.
+      </p>
+    </section>
+
+    <section class="section quests-section">
+      <div class="section-heading">
+        <p class="eyebrow">02 / YOUR OUTDOOR MISSIONS</p>
+        <h2>Today's little adventures</h2>
+        <p>Pick a quest, step outside safely, and complete it in real life.</p>
+      </div>
+
+      <div class="quest-grid" id="questGrid"></div>
+    </section>
+
+    <section class="section journal-section">
+      <div class="section-heading">
+        <p class="eyebrow">03 / YOUR FIELD JOURNAL</p>
+        <h2>Memories from outside</h2>
+        <p>Your saved discoveries stay in this browser.</p>
+      </div>
+      <div id="journal" class="journal">
+        <p class="empty-state">Your nature journal is waiting for its first discovery 🌱</p>
+      </div>
+      <button id="resetBtn" class="reset-btn">Reset my progress</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with curiosity, code, and open AI. 🌎</p>
+    <p class="footer-small">Go outside. Stay curious. Leave nature as you found it.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
